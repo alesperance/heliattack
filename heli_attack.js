@@ -109,8 +109,11 @@ Game.prototype = {
 	start: function() {
 		var self = this;
     
-		window.onkeydown = function (e) { self.keyDown(e); };
-		window.onkeyup = function (e) { self.keyUp(e); };
+		window.onkeydown   = function (e) { self.keyDown(e); };
+		window.onkeyup     = function (e) { self.keyUp(e); };
+		window.onmousemove = function (e) { self.mouseMove(e) };
+		window.onmousedown = function (e) { self.mouseDown(e) };
+		window.onmouseup   = function (e) { self.mouseUp(e) };
 		
 		this.startTime = Date.now();
 		
